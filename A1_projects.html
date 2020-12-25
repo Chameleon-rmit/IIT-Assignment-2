@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .toggle
+      {
+        display:block;
+        text-align:center;
+      }
+      body
+      {
+        width:1000px;
+        padding:20px;
+        background:black;
+        color:white;
+        margin:auto;
+      }
+      a
+      {
+        text-decoration:none;
+        color:rgba(168,168,255,0.8);
+      }
+      h2,h3
+      {
+        text-align:center;
+      }
+      #david_project, #jonathan_project, #jarrad_project
+      {
+        background:rgba(255,255,255,0.2);
+        padding:10px;
+        border-radius:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project">
+      <h2>David</h2>
+      <h3>Overview</h3>
+      <p>My project idea involves creating a software solution for the Australian prison system which will allow, at a cost, for electronic communication between inmates and their friends and family. This will be achieved by providing a secure messaging system where photo’s, videos and emails can be sent to an inmate via an online portal, while allowing the inmate to reply electronically. This is a service not currently provided in Australian correctional centres. A per delivery cost will be charges to help maintain the systems and provide ongoing support.</p>
+      <a href="javascript:toggle('david_project');" class="toggle">Show full project</a>
+      <div id="david_project" style="display:none;">
+        <h3>Motivation</h3>
+        <p>There are over 41,000 offenders in the Australian prison system (Australian Bureau of Statistics 2020). Enabling these offenders to have a low cost and quick way of staying in contact with their families, especially when it has been consistently shown that offenders who maintain contact with family have lower recidivism rates (Friedmann 2014), is an important project. Currently the only ways to communicate with an offender in Australia is via the mail service, which can take time and be prone to delays, <a href="https://auspost.com.au/service-updates/domestic-delivery-updates" target="_blank">such as those seen during the COVID pandemic</a>, or a limited electronic mail service at <a href="https://www.emailaprisoner.com.au/content/howitworks" target="_blank">emailaprisoner.com.au</a>, involving only a limited number of correctional facilities, the printing of communications and a convoluted delivery method involving the scanning of documents, manual paperwork, personal delivery to inmates and wasted personnel time.</p>
+        <h3>Description</h3>
+        <p>The primary feature of my project is a communication suite allowing for messaging between inmates, their families and friends. The project will achieve this by providing a single software suit that provides a portal for families and friends to access, a portal for inmates to access, and an administration portal for correctional facility staff (or equivalent) to access. This will not only allow for additional mail security, but also save each facility time and money in the processing of mail items as less time will be required by staff to manage the delivery of electronic mail.</p>
+        <p>The service will work with family and friends accessing an online portal, registering their details by providing appropriate ID, payment information and entering the details of the inmate they wish to contact. This information is then sent through to the administration portal, where a corrections officer will check for any legal orders in place that would prevent contact between the offender and the registered user. Once approved, an email is sent to the registered person enabling them to access their account and email that inmate. A registered user is able to have multiple inmates attached to their account, however each additional contact will go through a security check. Approved registered users will be able to attach photos and videos to a message, dependant on the access provided by the correctional facility. This will be facilitated via the administration portal where permissions can be setup for an inmate stating what they can and cannot receive, allowing for different grades of communication for each inmate. As an example, an inmate could potentially be rewarded for good behaviour and be provided the ability to receive a recorded video from their family or have their access downgraded/suspended appropriately.</p>
+        <p>As this would be a paid service, any payment would only be taken upon an email being marked as received. An account would be setup for the inmate automatically when their details are approved as part of the registration process, if an account does not already exist. To access a message, an inmate logs into their account via the software portal on a computer or tablet provide by the correctional facility. Standard email functions such as replying and the ability to save a message in different folders will be available within the inmate’s account. This will also assist with keeping long term offenders up to date with electronic communication techniques and potentially provide a means for distance education contact.</p>
+        <p>When an email is sent (either from a registered user or from an inmate), it will be held in the administration portal requiring approval prior to delivery. A correctional officer will log into their portal and then check the incoming/outgoing message before approving it to be sent on. This eliminates the need for printing out any correspondence, automatically keeps copies of all communications sent or received and records an audit log of actions taken and by which user. Providing a comparison to the service provided by emailaprisoner.com.au, as software will be installed on computers and tablets used by inmates, there will be no need for facility staff to print out any forms or deliver directly to inmates, with all administration actions taking place via the portal (accessible from any computer), creating safer and more secure delivery method.</p>
+        <h3>Tools and Technologies</h3>
+        <p>The software required will need to have the ability for multiple registrations, a front-end portal for inmates and the public as well as an administration area built in for management of services. emaiprisoner.com.au is already utilising software which would potentially meet some of the project aspects, however further development would likely be required. There would need to be a high level of attention to the security of the inmate portal to ensure that the portal an inmate accesses will provide no access to the wider network, existing solely on the facilities intranet, with a bridge between it and the administration area of the software. With offenders in NSW having access to the KOHA library system (Corrective Services NSW - Custodial Operations 2019), this shows that this level of access and security can be provided to inmates. Existing computers and tablets (Maley 2020; Gregoire 2020), would be utilised for the implementation of the software.</p>
+        <h3>Skills Required</h3>
+        <p>Skills that will be required to this project include the ability to program as it is likely that software will need to be developed to facilitate an end product. There is a possibility of open-source software being available to utilise and build upon, or an agreement reached with emailprisoner.com.au to enter a partnership and expand upon their current software platform. As hardware already exists within the correctional facilities, the only hardware requirements will be for development and hosting (if unable to be hosted by facilities). Due to the nature of the product and an existing base platform, it is extremely likely that the skills required to complete this project can be easily found.</p>
+        <h3>Outcome</h3>
+        <p>Should the project be successful the outcome will be a software portal that allows friends and families to keep in contact with inmates at a low cost, with an ease of use that does not currently exist and help to reduce rates of recidivism. Costs involved with the delivering of mail, as well as the manual checking, printing and scanning of mail will be minimised ensuring a greener solution. Vitally, this product will ensure more time for correctional officers to attend to other duties. Further potential for the software to be built upon in the future also exists. As an example, facilities for educational contacts could be built in, allowing for online tutoring or even implementing partnerships with TAFE and Universities allowing live courses that in inmate could attend remotely, further helping to reduce rates of recidivism (Giles 2016).</p>
+       <br />
+       <a href="javascript:toggle('david_references');" class="toggle">Show References</a>
+       <div id='david_references' style="display:none;">
+         <h3>References</h3>
+           <ul><blockquote>Australian Bureau of Statistics. (2020, December 3). Prisoners in Australia. Retrieved from Australian Bureau of Statistics: <a href="https://www.abs.gov.au/statistics/people/crime-and-justice/prisoners-australia/latest-release" target="_blank" >&lthttps://www.abs.gov.au/statistics/people/crime-and-justice/prisoners-australia/latest-release&gt.</a></blockquote>
+        <blockquote>Corrective Services NSW. (n.d.). COPP Section 8.4, Inmate libraries. Retrieved from Corrective Services NSW: <a href="https://correctiveservices.dcj.nsw.gov.au/content/dcj/csnsw/csnsw-home/download.html/content/dam/dcj/corrective-services-nsw/documents/copp/inmate-libraries.pdf" target="_blank">&lthttps://correctiveservices.dcj.nsw.gov.au/content/dcj/csnsw/csnsw-home/download.html/content/dam/dcj/corrective-services-nsw/documents/copp/inmate-libraries.pdf&gt.</a></blockquote>
+        <blockquote>Evatt, E. (2020, December 3). Computers in NSW prison cells: An interview with former Family Court Chief Justice Elizabeth Evatt – Criminal Law. (P. Gregoire, Interviewer) Retrieved from <a href="http://communitywatch.com.au/2020/12/04/computers-in-nsw-prison-cells-an-interview-with-former-family-court-chief-justice-elizabeth-evatt-criminal-law/" target="_blank" >&lthttp://communitywatch.com.au/2020/12/04/computers-in-nsw-prison-cells-an-interview-with-former-family-court-chief-justice-elizabeth-evatt-criminal-law/&gt.</a></blockquote>
+        <blockquote>Friedmann, A. (2014, April). Lowering Recidivism through Family Communication. Retrieved from Prison Legal News: <a href="https://www.prisonlegalnews.org/news/2014/apr/15/lowering-recidivism-through-family-communication/" target="_blank">&lthttps://www.prisonlegalnews.org/news/2014/apr/15/lowering-recidivism-through-family-communication/&gt.</a></blockquote>
+        <blockquote>Maley, J. (2020, March 10). Prisoners to get tablet computers in cells in bid to cut reoffending rates. Retrieved from The Sydney Morning Herald:<a href="https://www.smh.com.au/politics/nsw/prisoners-to-get-tablet-computers-in-cells-in-bid-to-cut-reoffending-rates-20200309-p548b0.html" target="_blank" >&lthttps://www.smh.com.au/politics/nsw/prisoners-to-get-tablet-computers-in-cells-in-bid-to-cut-reoffending-rates-20200309-p548b0.html&gt.</a></blockquote>
+        <blockquote>Giles, M 2016, “Study in prison reduces recidivism and welfare dependence: A case study from Western Australia 2005–2010 | Australian Institute of Criminology,” Aic.gov.au, viewed 22 December 2020, <a href="<https://www.aic.gov.au/publications/tandi/tandi514>" target="_blank" >&lthttps://www.aic.gov.au/publications/tandi/tandi514&gt.</a></blockquote>
+      </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="project">
+      <h2>Jonathan</h2>
+      <h3>Overview</h3>
+      <p>I have an idea regarding a vertical scrolling shooting gmae ala DonPachi or Raiden, where the player controls an avatar on a screen to shoot and destroy enemies while avoiding being hit.  The key difference I intended was to slowly increase the scale of the game over time, with character progression as well as expanding the field of view by increasing zoom to accomodate increasing range and abilities as the game progresses.</p>
+      <a href="javascript:toggle('jonathan_project');" class="toggle">Show full project</a>
+      <div id="jonathan_project" style="display:none;">
+        <h3>Motivation</h3>
+        <p>I have always wondered if RPG-like progression with scaling characters could be combined successfully with the vertical-scroller genre as I have not seen such done before.  The two genres often do not marry well together as increasing complexity and abilities of character progression does not represent well on a more visual game like a vertical-scoller.  However, I believe that by manipulating the zoom (and possibly the physics time-factor), this can be achieved.</p>
+        <h3>Description</h3>
+        <p>A vertical scroller shooting game involves the player controlling an avatar (usually a sprite) that moves over a 2D visual field.  Enemies appear on the field that present threats the player will have to avoid or destroy with the avatar's weapons.  Keyboard controls the avatar's movements as well as menu selections.</p>
+        <p>Each "stage" corresponds to a scripted (or generated) series of enemies and obstacles, at the end of each "stage", the player is provided with advancement and game options before continuing on to the next.</p>
+        <p>The primary innovation involved a time and space zoom function.  Key controls to zoom out or in around the avatar changes the field of view, time controls to speed up or slow down the simulation tick rate; these functions are limited by character progression.</p>
+        <h3>Tools and Technologies</h3>
+        <p>While undecided, I believe this can be developed on Unity, although I haven't worked with the platform before.</p>
+        <h3>Skills</h3>
+        <p>Programming skills and familiarity with Unity will be required at a minimum for this project.</p>
+        <h3>Outcome</h3>
+        <p>A successful development should result in the framework with a proof of concept of each of the features described.</p>
+      </div>
+    </div>
+    <hr />
+    <div class="project">
+      <h2>Jarrad</h2>
+      <h3>Overview</h3>
+      <p>A 3D web application to teach how to set up and begin filling an artificial Memory Palace.</p>
+      <a href="javascript:toggle('jarrad_project');" class="toggle">Show full project</a>
+      <div id="jarrad_project" style="display:none;">
+        <h3>Motivation</h3>
+        <p>The project would be useful in that being able to perfectly memorise and store information in the mind would be incredibly useful for the typical university course. Closed book tests that rely upon knowing the contents of the assigned textbooks would be trivial if you have them memorised. Having large amounts of profession-specific information in your mind and easily referenced would also be a boon in professional life. Taking it a step further, courses could be written/created with perfect memorisation of core understandings as a learning objective making the long term retention of the topics taught a possibility.</p>
+        <h3>Description</h3>
+        <p>To give a detailed description of the project first requires a look at the underlying principles for efficiently and permanently storing information in the brain. There are only five:
+        <ul>
+          <li><strong>Storing visual objects in the brain</strong> - The brain is very efficient at storing/remembering spatial information. To create a memory all that is required is the visualising of two objects connected to each other. Picturing a black cat on a chair creates an association between 'chair' and 'black cat', it is easy to remember one when prompted with the other - "What was on the chair?" or "What was the black cat on?"; or more simply "Chair" or "Black cat".</li>
+          <li><strong>Encoding information into visual objects</strong> - If storing visual objects by linking them together works then the next step is to convert the information you want to memorise into visual objects. Some things are already visual objects and so don't need encoding, but others such as digits, months, abstract concepts, etc. require picking a visual object to represent them.</li>
+          <li><strong>Refreshing connections</strong> - Just making a connection between two visual objects will store the association in your brain but that association will fade unless refreshed (see the Spacing effect, first studied by Hermann Ebbinghaus in his book 'Memory: A Contribution to Experimental Psychology' in 1885, should be considered Common Knowledge by now). A systematic way of storing memorised content so that it can be reviewed efficiently is required and the Method of Loci is the way chosen by this project.</li>
+          <li><strong>Virtual Method of Loci</strong> - The Method of Loci is typically done with a well-known location but (Legge, Madan, Ng, and Caplan, 2012) found that it can be just as effective with a lower-detailed created virtual environment. Following on from that the project will create a compact virtual environment consisting of a series of cube rooms. Each room will be made up of an anchoring visual object in the centre as well as two alcoves and a doorway to other rooms in each of the four walls, the ceiling, and the floor (for a total of six doorways and twelve alcoves per room).</li>
+          <li><strong>Expansion of storage system</strong> - Storing information can be done at the top level of the Virtual Method of Loci by storing the virtual objects representing information to be memorised directly in the alcoves of the rooms. This would however only allow twelve pieces of information to be stored per room which is not very efficient. Instead each alcove will be filled with a randomly chosen visual object which will then be split into five sub-objects ("<a href="https://www.pmemory.com/student-area/GMS-Manual/The_Russian_Doll_Method.htm">Russian Doll</a>" method from the <a href="https://www.pmemory.com/student-area/GMS-Manual/The_Giordano_Memorization_System_(GMS).htm">Giordano Memorization System</a> created in 1990 by Vladimir A. Kozarenko), twelve visual objects ("<a href="https://www.pmemory.com/student-area/GMS-Manual/The_Free_Association_Method.htm">Free Association</a>" method from the <a href="https://www.pmemory.com/student-area/GMS-Manual/The_Giordano_Memorization_System_(GMS).htm">Giordano Memorization System</a>) on each sub-object, and then each of those also split into five sub-objects. This gives three thousand six hundred "slots" to store information on in each room, allowing rooms to encompass entire topics.</li>
+        </ul></p>
+        <p>All of which was necessary preamble to give context to what the project will be. A 3D application giving a representation of the Virtual Method of Loci implemented with WebGL to run in any common web browser and using First Person Shooter controls. It will have a text tutorial that will teach how to internalise the memorisation system and 3D models will be able to be selected for the alcoves, Free Association, and room anchor visual objects.</p>
+        <h3>Tools and Technologies</h3>
+        <p><a href="https://threejs.org">three.js</a> - A Javascript library/API built on top of WebGL.<br />
+        Any modern web browser - For production and end-use a web browser that supports WebGL will be required.<br />
+        <a href="https://3dmodelhaven.com">3DModelHaven</a> - A public domain/copyright-free (<a href="https://creativecommons.org/publicdomain/zero/1.0">CC0</a> license) repository of 3D models.</p>
+        <h3>Skills Required</h3>
+        <p>Web Coding - A combination of HTML, CSS, and Javascript.<br />
+        Graphics Coding - An understanding of how graphics programming is done in the web browser (using three.js) including loading of 3D models.<br />
+        Server Administration - To keep initial costs down having someone who can set up a cheap server to host the web application.<br />
+        Marketing - Being able to make a sales pitch selling the idea/implementation.<br />
+        Course Creation - Being able to use the created product to create pre-filled databases of images/content to serve as examples.</p>
+        <p>The above skills are all commonly available and easy to pick up. No special software or hardware is required for the project.</p>
+        <h3>Outcome</h3>
+        <p>There are several different outcomes possible for the project that would be considered "successful": having a personal memory system and a way to share it with others, selling it to investors/another company, university adoption (and so a more efficient way of learning new courses), or dedicated to the common good and adopted by the masses (like Wikipedia).</p>
+        <p>The impact of the project will be different depending on what outcome ends up being aimed for. As a personal project, the impact will be minimal; as a tool adopted by universities or the masses, it could fundamentally change how things are taught.</p>
+        <p>The "outcome" of the project is something I'm less interested in; the idea and the implementation are what is interesting to me.</p>
+        <a href="javascript:toggle('jarrad_references');" class="toggle">Show References</a>
+        <div id='jarrad_references' style="display:none;">
+          <h2>References</h2>
+          <p>Legge, E., Madan, C., Ng, E., and Caplan, J., 2012. Building a memory palace in minutes: Equivalent memory performance using virtual versus conventional environment with the Method of Loci. Acta Psychologica, [online] 141(3), pp.380-390. Available at: <a href="https://www.academia.edu/2987335/Building_a_memory_palace_in_minutes_Equivalent_memory_performance_using_virtual_versus_conventional_environments_with_the_Method_of_Loci">https://www.academia.edu/2987335/Building_a_memory_palace_in_minutes_Equivalent_memory_performance_using_virtual_versus_conventional_environments_with_the_Method_of_Loci</a></p>
+        </div>
+      <h2>Other potential ideas</h2>
+      <p>Realtime model of a location using multiple security camera pairs (+ VR?)</p>
+      <p>Drive-by-wire human-powered vehicle (within the Australian legal classification of a bicycle)</p>
+      <p>Handheld chording keyboard (see <a href="http://www.alphagrip.com/">http://www.alphagrip.com/</a>) but with a different take on it (improved mouse input at a minimum)</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    function toggle(el)
+    {
+      var element=document.getElementById(el);
+      var link=element.previousElementSibling;
+      if(element.style.display=='none')
+      {
+        element.style.display='';
+        if(link.tagName=="A")
+        {
+          link.innerHTML=link.innerHTML.replace("Show", "Hide");
+        }
+      }
+      else
+      {
+        element.style.display='none';
+        if(link.tagName=="A")
+        {
+          link.innerHTML=link.innerHTML.replace("Hide", "Show");
+        }
+      }
+    }
+  </script>
+</html>
