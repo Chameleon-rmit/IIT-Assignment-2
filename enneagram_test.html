@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <style>
+body,html
+{
+  margin:0;
+  padding:0;
+  width:100%;
+}
+h1,h2
+{
+  text-align:center;
+}
+.choice
+{
+  display:inline-block;
+  width:calc(33% - 7px) !important;
+  padding:5px;
+}
+.selected
+{
+  background:rgba(0,0,0,0.3);
+}
+a
+{
+  text-decoration:none;
+  color:black;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Enneagram Test</h1>
+    <h1 id='result'></h1>
+    <p style="width:1000px; margin:auto; text-align:center;">Given two selections the third selection is forced.<br />
+    Read through the descriptions in each row and pick the one that is most like you.<br />
+    Once you have a selection from all three rows, and if you have gotten <strong>Type Indeterminate</strong>, pick the row that you are least confident in and switch it to another selection until you get a valid Type.<br />
+    (These descriptions come from the book `The Modern Enneagram: Discover Who You Are and Who You Can Be` by Kacie Berghoef and Melanie Bell.)</p>
+    <div id="social">
+      <h2>Social Style</h2>
+      <a class="choice" id="assertive"><strong>The Assertive Triad.</strong> Types Three, Seven, and Eight fit the social style of moving against others. Types that use this style tend to be doers and bring the strength of getting things moving. They focus on taking action and resolving situations quickly. Interpersonally, their assertiveness gives them the easiest time of the styles confronting and speaking their minds with other people. Sometimes, people of these types, in particular, can come off as overly brusque, with the potential to hurt others' feelings.</a>
+      <a class="choice" id="compliant"><strong>The Compliant Triad.</strong> Types One, Two, and Six fit the social style of moving toward others. Types that use this style tend to be dutiful and bring the strength of strong cooperation with others. They focus on providing support and assistance. Interpersonally, these types tend to convey warmth and a desire to please, and they can "lean in" in order to read your needs. Sometimes these types can come off as overly focused on social rules in interactions, with the potential of irritating others.</a>
+      <a class="choice" id="withdrawn"><strong>The Withdrawn Triad.</strong> Types Four, Five, and Nine fit the social style of moving away from others. Types that use this style tend to have a focus that is at once internal, and also broad, strategic, and global. Interpersonally, these types tend to be thoughtful, self-contained, and are often (although not always) more introverted than the other two styles. Sometimes, these types have a difficult time speaking up and expressing themselves in social situations, leaving others confused as to their needs and desires.</a>
+    </div>
+    <div id="conflictResolution">
+      <h2>Conflict Resolution Style</h2>
+      <a class="choice" id="competency"><strong>The Competency Triad.</strong> Types One, Three, and Five are natural problem solvers. When faced with a conflict or challenge, they aim to stay civil and immediately strategise to find solutions. These types are excellent at long-term planning and keeping themselves or a group on track to reaching a goal. The downside is that these types can be overly focused and emotionally restricted. When they solve conflicts analytically, they avoid either feeling immediate emotions or viewing the situation positively. This means that these types don't always take emotional needs and the broader context of the problem into account when decisions are made, making some solutions less useful than they could be.</a>
+      <a class="choice" id="emotionalRealness"><strong>The Emotional Realness Triad.</strong> Types Four, Six, and Eight are skilled at drawing out emotions and feelings. In conflicts and challenges, they first want to process their feelings and hear emotional responses from others, in order to bring pressing needs to the surface. This allows difficult feelings, conflicts, and challenges out into the open, clearing the air to move forward. The downside is that these types can have difficulty moving forward; addressing feelings is productive initially, but has the potential to spiral into endless conflict and emotional processing, making it hard to see the positivity in the situation or implement solutions.</a>
+      <a class="choice" id="positiveOutlook"><strong>The Positive Outlook Triad.</strong> Types Two, Seven, and Nine excel at making the best out of any challenge and having a broad view -- a view where the problem is not such a big deal. Seeing positivity and finding hope in even dark times helps them keep their spirits up and keep going under duress. The downside to this style is that it can lead to denial that a conflict or challenge is even taking place. Denial makes it hard to air out feelings or develop solutions to the challenge. Not addressing conflict can cause it to grow bigger than it would have if it had been acknowledged right away.</a>
+    </div>
+    <div id="objectRelations">
+      <h2>Object Relations</h2>
+      <a class="choice" id="attachment"><strong>The Attachment Triad</strong> reflects how we all attach and attempt to remain in a flow with the world around us. Types Three, Six, and Nine tend to focus on attaching to and then maintaining a certain internal state. This ranges from attachment to others' desires, to attachment to external support, to attachment to a sense of inner peace. These types' defense mechanisms strive to keep things just the way they are.</a>
+      <a class="choice" id="rejection"><strong>The Rejection Triad</strong> reflects the strategies we use for survival in the world. Types Two, Five, and Eight feel rejected by the world and like they need to bring something to others. Their strategies include offering people their love and service, their knowledge and expertise, and their strong protection. These types' defense mechanisms attempt to gain acceptance while assuming the individual will not receive it."</a>
+      <a class="choice" id="frustration"><strong>The Frustration Triad</strong> describes how all of us try to get what we want from the world. Types One, Four, and Seven tend to feel chronically frustrated -- like they are never able to get their needs met. This frustration may stem from the world's lack of morality, other people's deviation from an idealised view of them, or a low supply of excitement. These types' defenses seek an ideal rather than savouring lived experience.</a>
+    </div>
+  </body>
+</html>
+<script>
+  var choices=document.getElementsByClassName('choice');
+  for(var i=0; i<choices.length; i++)
+  {
+    var c=choices[i];
+    c.href='javascript:void(0);';
+    c.addEventListener('click', choiceMade.bind(undefined, c));
+  }
+  function choiceMade(a)
+  {
+    var subChoices=a.parentNode.getElementsByClassName('choice');
+    for(var i=0; i<subChoices.length; i++)
+    {
+      subChoices[i].setAttribute('class', 'choice');
+    }
+    a.setAttribute('class', 'choice selected');
+    showResult();
+  }
+  function showResult()
+  {
+    var selected=document.getElementsByClassName('selected');
+    if(selected.length<3)
+        return;
+    var possibles=[];
+    if(selected[0].id=="assertive")
+      possibles=[3,7,8];
+    else if(selected[0].id=="compliant")
+      possibles=[1,2,6];
+    else if(selected[0].id=="withdrawn")
+      possibles=[4,5,9];
+
+    if(selected[1].id=="competency")
+      possibles=possibles.concat([1,3,5]);
+    else if(selected[1].id=="emotionalRealness")
+      possibles=possibles.concat([4,6,8]);
+    else if(selected[1].id=="positiveOutlook")
+      possibles=possibles.concat([2,7,9]);
+
+    if(selected[2].id=="attachment")
+      possibles=possibles.concat([3,6,9]);
+    else if(selected[2].id=="rejection")
+      possibles=possibles.concat([2,5,8]);
+    else if(selected[2].id=="frustration")
+      possibles=possibles.concat([1,4,7]);
+
+    var counts=[0,0,0,0,0,0,0,0,0];
+    var chosen=-1;
+    for(var i=0; i<possibles.length; i++)
+    {
+      counts[possibles[i]-1]++;
+      if(counts[possibles[i]-1]==3)
+      {
+        chosen=possibles[i];
+      }
+    }
+    var result=document.getElementById('result');
+    if(chosen==-1)
+      result.innerHTML="Type Indeterminate";
+    else
+      result.innerHTML="Type "+chosen;
+    result.innerHTML+="<br />"+JSON.stringify(counts);
+  }
+</script>
