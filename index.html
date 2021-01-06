@@ -1,8 +1,93 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      html, body
+      {
+        padding:0;
+        margin:0;
+      }
+      h1, h2
+      {
+        text-align:center;
+      }
+      .content, .tech_content
+      {
+        display:none;
+      }
+      .content.shown, .tech_content.shown
+      {
+        display:initial;
+      }
+      #tech_menulist .menu:first-child
+      {
+        border-left: solid 2px #222 !important;
+      }
+      #tech_menulist .menu:last-child
+      {
+        border-right: solid 2px #222 !important;
+      }
+      .menu:first-child
+      {
+        border-left: solid 2px #999 !important;
+      }
+      .menu:last-child
+      {
+        border-right: solid 2px #999 !important;
+      }
+      .menu
+      {
+        text-decoration: none;
+        display:inline-block;
+        padding:20px;
+        text-align:center;
+        color:white;
+        border-right: solid 1px #999;
+        border-left: solid 1px #999;
+      }
+      .menu.selected
+      {
+        background: rgba(0,255,255,0.2) !important;
+        cursor:initial;
+      }
+      .menu:hover
+      {
+        background: rgba(255,255,255,0.3);
+      }
+      #tech_menulist .menu
+      {
+        padding:10px;
+        border-right: solid 1px #222;
+        border-left: solid 1px #222;
+      }
+      #menulist, #tech_menulist
+      {
+        text-align:center;
+      }
+      #menulist
+      {
+        background:black;
+        border-bottom: solid 1px #777;
+      }
+      #tech_menulist
+      {
+        background:rgb(64,64,64);
+        border-bottom: solid 1px #777;
+      }
+    </style>
+  </head>
   <body>
-    <h1>Placeholder</h1>
-    <div class="content" id="tools">
+    <div id="menulist"></div>
+    <div class="content shown" id="introduction">
+      <h1>Introduction</h1>
+    </div>
+    <div class="content" id="team_profile">
+      <h1>Team Profile</h1>
+    </div>
+    <div class="content" id="ideal_jobs">
+      <h1>Ideal Jobs</h1>
+    </div>
+    <div class="content" id="Tools">
       <h1>Tools</h1>
       <p>Assignment 1 websites:
         <ul>
@@ -14,5 +99,98 @@
         </ul>
       </p>
     </div>
+    <div class="content" id="industry_data">
+      <h1>Industry Data</h1>
+    </div>
+    <div class="content" id="it_work">
+      <h1>IT Work</h1>
+    </div>
+    <div class="content" id="it_technologies">
+      <div id="tech_menulist"></div>
+      <h1>IT Technologies</h1>
+      <div class="tech_content shown" id="machine_learning">
+        <h2>Machine Learning</h2>
+      </div>
+      <div class="tech_content" id="ar_vr">
+        <h2>AR/VR</h2>
+      </div>
+      <div class="tech_content" id="natural_language_processing">
+        <h2>Natural Language Processing</h2>
+      </div>
+      <div class="tech_content" id="blockchain">
+        <h2>Blockchain</h2>
+      </div>
+    </div>
+    <div class="content" id="a2_project">
+      <h1>Project Idea</h1>
+    </div>
+    <div class="content" id="group_reflection">
+      <h1>Group Reflection</h1>
+    </div>
   </body>
+  <script>
+    var menulist=document.getElementById('menulist');
+    var headings=document.getElementsByTagName('h1');
+    var extraClass=' selected';
+    for(var i=0; i<headings.length; i++)
+    {
+      var h=headings[i];
+      var a=document.createElement('a');
+      a.href='javascript:showContent("'+h.parentNode.id+'");';
+      a.id=h.parentNode.id+'_menu';
+      a.innerHTML=h.textContent;
+      a.setAttribute('class', 'menu'+extraClass);
+      extraClass='';
+      menulist.appendChild(a);
+    }
+
+    var tech_menulist=document.getElementById('tech_menulist');
+    var headings=document.getElementsByClassName('tech_content');
+    extraClass=' selected';
+    for(var i=0; i<headings.length; i++)
+    {
+      var h=headings[i];
+      var a=document.createElement('a');
+      a.href='javascript:showTechContent("'+h.id+'");';
+      a.id=h.id+'_menu';
+      a.innerHTML=h.firstElementChild.textContent;
+      a.setAttribute('class', 'menu'+extraClass);
+      extraClass='';
+      tech_menulist.appendChild(a);
+    }
+
+    function showTechContent(id)
+    {
+      var contents=document.getElementsByClassName('tech_content');
+      for(var i=0; i<contents.length; i++)
+      {
+        contents[i].setAttribute('class', 'tech_content');
+      }
+      document.getElementById(id).setAttribute('class', 'tech_content shown');
+
+      var menus=document.getElementById('tech_menulist').getElementsByClassName('menu');
+      for(var i=0; i<menus.length; i++)
+      {
+        menus[i].setAttribute('class', 'menu');
+      }
+      document.getElementById(id+'_menu').setAttribute('class', 'menu selected');
+    }
+
+    function showContent(id)
+    {
+      var contents=document.getElementsByClassName('content');
+      for(var i=0; i<contents.length; i++)
+      {
+        contents[i].setAttribute('class', 'content');
+      }
+      document.getElementById(id).setAttribute('class', 'content shown');
+
+      var menus=document.getElementById('menulist').getElementsByClassName('menu');
+      for(var i=0; i<menus.length; i++)
+      {
+        menus[i].setAttribute('class', 'menu');
+      }
+      document.getElementById(id+'_menu').setAttribute('class', 'menu selected');
+    }
+  </script>
 </html>
