@@ -29,5 +29,5 @@ self.addEventListener('fetch', event =>
       }
 
       return fetch(event.request);
-    })
+    }())
   });
