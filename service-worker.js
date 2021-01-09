@@ -13,6 +13,14 @@ self.addEventListener('install', function(event)
 
 self.addEventListener('fetch', event =>
   {
+    event.respondWith(
+      caches.match(event.request).then(function(response)
+        {
+          return response || fetch(event.request);
+        })
+    );
+  });
+/*
     event.respondWith(async function()
     {
       const cache = await caches.open("full_app");
@@ -27,3 +35,4 @@ self.addEventListener('fetch', event =>
       return fetch(event.request);
     })
   });
+  */
