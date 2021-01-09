@@ -13,10 +13,8 @@ self.addEventListener('install', function(event)
 
 self.addEventListener('fetch', event =>
   {
-    console.log(event);
     event.respondWith(async function()
     {
-      console.log(fetch(event.request));
       return fetch(event.request);
       const cache = await caches.open("full_app");
       const cachedResponse = await cache.match(event.request);
