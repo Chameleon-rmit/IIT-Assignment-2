@@ -1,0 +1,22 @@
+{
+  "short_name": "SEEKS A2",
+  "name":"RMIT's Introduction to Information Technology 2020 Study Period Four Assignment Two by SEEKS",
+  "description":"The second assignment for IIT",
+  "icons": [
+    {
+      "src":"/images/icons-192.png",
+      "type":"images/png",
+      "sizes":"192x192"
+    },
+    {
+      "src":"/images/icons-512.png",
+      "type":"images/png",
+      "sizes":"512x512"
+    }
+  ],
+  "start_url":"/",
+  "background_color":"#3367D6",
+  "display":"fullscreen",
+  "scope":"/",
+  "theme_color":"#3367D6"
+}
