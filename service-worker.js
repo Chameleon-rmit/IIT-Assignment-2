@@ -21,6 +21,7 @@ self.addEventListener('fetch', event =>
         return cachedResponse;
 
       const response = await fetch(event.request);
+      const cache = await caches.open("full_app");
       cache.put(event.request, response.clone());
       return response;
     }())
