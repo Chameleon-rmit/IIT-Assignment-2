@@ -16,6 +16,7 @@ self.addEventListener('fetch', event =>
     console.log(event);
     event.respondWith(async function()
     {
+      return fetch(event.request);
       const cache = await caches.open("full_app");
       const cachedResponse = await cache.match(event.request);
 
