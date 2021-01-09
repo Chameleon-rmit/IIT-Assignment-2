@@ -14,9 +14,9 @@
       "sizes":"512x512"
     }
   ],
-  "start_url":"/",
+  "start_url":"./",
   "background_color":"#3367D6",
   "display":"fullscreen",
-  "scope":"/",
+  "scope":"./",
   "theme_color":"#3367D6"
 }
