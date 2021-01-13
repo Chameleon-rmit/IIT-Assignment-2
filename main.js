@@ -107,7 +107,12 @@ function status(response)
 function get_content(title)
 {
   const content=document.getElementById(title);
-  fetch('./content/'+title.replace(/\\/g, ' ')+".html")
+  if(title=="IT Technologies")
+  {
+    content.innerHTML=it_technologies_menu();
+    return;
+  }
+  fetch('./content/'+title.replace(/\//g, ' ')+".html")
   .then(status)
   .then(function(response)
     {
@@ -134,10 +139,9 @@ const technologies = [
   },
 ];
 
-function it_technologies_content_function(page)
+function it_technologies_menu()
 {
   return `
-        <ion-content fullscreen>
           <ion-list>
           ${technologies.map(tech => `
             <ion-item button onclick="showTech('${tech.title}')">
@@ -147,7 +151,6 @@ function it_technologies_content_function(page)
             </ion-item>
           `).join('\n')}
           </ion-list>
-        </ion-content>
       `;
 }
 
