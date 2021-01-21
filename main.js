@@ -19,12 +19,15 @@ pages = [
         },
         { 'title': 'Bibliography',
         },
+        { 'title': 'Appendix',
+        },
         ];
 
 customElements.define('nav-home', class NavHome extends HTMLElement
   {
     connectedCallback()
     {
+      // TODO: ion-title is being style as white on white on iphone
       this.innerHTML = `
         <ion-header translucent>
           <ion-toolbar>
@@ -131,9 +134,9 @@ function get_content(title)
 const technologies = [
   { 'title': 'Machine Learning',
   },
-  { 'title': 'Virtual/Augmented/Extended Reality',
-  },
   { 'title': 'Natural Language Processing',
+  },
+  { 'title': 'Virtual Reality',
   },
   { 'title': 'Blockchain',
   },
@@ -179,6 +182,20 @@ customElements.define('nav-detail-tech', class NavDetail extends HTMLElement
       get_content(this.tech.title);
     }
   });
+
+/*
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) =>
+  {
+    // don't show the install notification on mobile
+    e.preventDefault();
+    deferredPrompt=e;
+    var installButton=document.createElement('ion-button');
+    installButton.setAttribute('slot', 'end');
+    installButton.innerHTML='Install';
+    document.querySelector('ion-toolbar').appendChild(installButton);
+  });
+  */
 
 if('serviceWorker' in navigator)
 {

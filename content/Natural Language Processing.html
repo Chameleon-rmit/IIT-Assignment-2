@@ -1,0 +1,184 @@
+<div class="content_box">
+  <h2>What does it do?</h2>
+  <p>
+The
+idea of chatbots and its necessary requirement of natural language
+processing has been around since very early in computing history. 
+The Turing Test is a famous, if incomplete, test that asks if a
+computer can successfully pretend to be a human through a text
+interface (Turing 1950). Other uses for natural language processing
+involve customer service, interpreting and answering questions,
+translation and text recognition. While the Turing Test is simple and
+not nearly sufficient to prove strong AI, passing a Turing Test has
+proven extremely hard. 
+  </p>
+  <p>
+One
+of the chief challenges facing natural language processing is long
+term dependency. Simple chatbots that depend on older models of
+natural language parsers like Markov chains or recurrent neural
+networks quickly run into scaling issues when attempting to
+‘remember’ large quantities of past text (Kolen &amp; Kremer
+2001). Thus, they meet problems staying relevant to the topic when
+generating text, the problems become obvious when they are asked to
+go on for longer (Liu, Baldwin &amp; Cohn 2017) (Lin, Bendit-Shtull &amp;
+Spinner n.d. 2020).   
+  </p>
+  <p>
+Another
+challenge is one of context and interpretation. Humans naturally
+embed context into their language and use the context as well as
+common-sense to interpret what is said. Winograd schemas are one
+example of ambiguous interpretations requiring some knowledge of the
+world in order to successfully understand (Ackerman 2014). An example
+of such a sentence is: “The trophy doesn’t fit in the suitcase
+because it is too large/small”, where the “it” word can refer
+to either the trophy or the suitcase depending on the last word. It
+requires being sensitive to the language’s context and some
+common-sense to know that “fit in” implies a size restriction.
+Building or training such understanding into an AI is extremely hard
+(Wang et al. 2019).   
+  </p>
+  <p>
+These
+challenges have been partially met in recent times.   
+  </p>
+  <img class="nondark" src="./images/ibm_watson.gif" />
+  <p>
+IBM
+created Watson to field open questions and used it successfully to
+play a game of Jeopardy in 2011 <i>(fig.
+10)</i>. Jeopardy is a quiz show requiring the player to
+interpret questions asked in natural language and reply with answers
+in natural language (Murdock 2011).   
+  </p>
+  <p>
+BERT
+is a language model that was developed by Google in 2019 and has
+scored about 85% accuracy on an expanded Winograd schema challenge
+(Devlin et al. 2019) and similarly on other language processing
+benchmarks. It achieves such proficiency through the use of
+Transformer architecture that solve the problem of long-term
+dependency (Vaswani et al. 2017).   
+  </p>
+  <p>
+Similarly,
+GPT-3 is also built on Transformer architecture by OpenAI (Brown et
+al. 2020) and has captured public imagination with its ability to
+generate text, answer philosophy questions (Weinberg 2020), create
+website code from descriptions, summarize long texts and many other
+functions besides.   
+  </p>
+  <p class="content_box">
+Both tools take only 60ms + of GPU fetch time over standard JVs for
+training one machine while using very modest network configuration
+under typical case load (1000 input tokens by one token machine)
+where they show good ability working with very noisy environments to
+handle even high complexity datasets.
+  </p>
+  <p>
+The
+above is the continuation of this essay by GPT-2, the earlier and
+smaller predecessor of GPT-3, given the entire text above it. The
+demonstrated coherence even over a very long sentence and sensibility
+is impressive for machine generation and nearly matches state of the
+art.   
+  </p>
+  <p>
+As
+GPT-3 does not differ much from GPT-2 except in size, and yet does
+not demonstrate that its size is starting to yield lower benefits, it
+is certain that in the short term, the continued scaling in
+complexity and data of models like GPT and BERT will proceed.   
+  </p>
+  <img class="nondark" src="./images/nlp.gif" />
+  <p>
+As
+the outputs are already becoming human-like and the systems become
+yet more capable, there is the possibility that such natural language
+generation systems may significantly improve machine translation,
+voice recognition and even automated question answering services in
+the near future.   
+  </p>
+</div>
+<div class="content_box">
+  <h2>What is the likely impact?</h2>
+  <p>
+Natural
+language processing serves as the interface between the rigid digital
+world of computers and the more flexible context dependent
+communication of humans. Having the ability to parse or generate
+text, natural language processing could let AI cover far more areas
+where humans currently have to work in.   
+  </p>
+  <p>
+Language
+models can already generate magazine articles and blog posts that
+pass human inspection (Hao 2020), financial reports and election
+coverage has also seen AI generated content (Martin 2019). Natural
+language AIs can summarize information, generate stories and pick out
+images and movie scenes with the desired sentiment. In many areas,
+such language models are poised to replace human labour where new
+content is not required. For now, however, the usage of natural
+language AIs in industry is limited to being human assistants and
+data summarization.   
+  </p>
+  <p>
+Consumers
+and producers of such content will be affected by such changes.
+Producers might find their jobs changing, where they serve to write
+prompts for AI content generation or fine-tuners to choose relevant
+articles for the computer to parse and serve as the well of content
+from which it draws. In the near future, we might find scientific
+literature review written by bots, search engines able to answer
+questions posed in natural language and even legal documents written
+by such natural language generation.   
+  </p>
+</div>
+<div class="content_box">
+  <h2>How will this affect you?</h2>
+  <p>
+More
+disturbingly is the potential wave of AI generated content that
+consumers might have to increasingly wade through on the internet. 
+Natural language processing allows computers to generate “fake”
+content that can fool humans into treating them like other humans
+(Douglas 2020), opening the door to bots pretending to be humans well
+enough that they can be used to spread disinformation or pretend a
+group is more numerous than otherwise.   
+  </p>
+  <p>
+Curation
+against disinformation and trust on the internet might well be
+severely impacted by such a deluge.  Efforts by humans to curb such
+“spam” could be quickly overwhelmed by AI generated content from
+malicious actors, chatbots have no need of sleep and their running
+cost is cents per page <i>(fig.
+12)   </i>
+  </p>
+  <img class="nondark" src="./images/chatbot_costs.gif" />
+  <p>
+For
+now, the cost of training models like GPT-3 run into millions just
+from the compute costs alone.  The amount of programming expertise is
+also a large barrier in such experimental systems. Yet the
+inevitability of decreasing compute costs promises that such issues
+will be resolved sooner or later; not to mention that such costs are
+small by the standards of large corporations or governments.   
+  </p>
+  <p>
+On
+the positive side, natural language processing could allow computers
+to interface better with human communication, allowing AI assistants
+to be ‘smarter’. Less computer literate people could have far
+more accessibility than before, as such systems might be able to
+understand natural language commands rather than requiring some level
+of functional knowledge of computers to operate.   
+  </p>
+  <p>
+The
+increasing reach of AI into the domain of human language thus allows
+greater automation of every portion of human interaction that relies
+on said language.   
+  </p>
+</div>

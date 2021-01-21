@@ -1,0 +1,479 @@
+<div class="content_box">
+  <h2>Overview</h2>
+  <p>
+You
+can now quickly compose repetitive sentences with ease and speed.
+  </p>
+  <p>
+RoboWrite
+is a cross-platform application (app) that will create full sentences
+based on selections from a user-defined form. The user can select
+key-words to finish a sentence or even choose entire sentences. Each
+template is fully customisable.
+  </p>
+  <p>
+The
+app automatically copies the results for the user to paste in another
+app or document. However, the user can also view and modify results
+and save or share it anywhere.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Motivation</h2>
+  <p>
+Health
+professionals, psychologists and physiotherapists write reports on
+patients daily. These often follow the same structure,
+resulting in hours of wasted writing time. Repeat sentences are
+usually about the symptoms, appearance and progress of a patient. For
+example: 
+  </p>
+  <h3>Physiotherapy</h3>
+  <ul>
+    <li>The patient’s knee was extremely painful on <em>extension and walking</em>.</li>
+    <li>The patient had <em>70%</em> range of motion.</li>
+  </ul>
+  <h3>Psychology</h3>
+  <ul>
+    <li>The patient looked <em>tired </em>and had <em>low energy</em>.</li>
+    <li>Mr X appeared <em>well-groomed, prepared and rested</em>.</li>
+    <li>His mood appeared <em>stable and moderate</em>.  His speech was <em>talkative and coherent.</em></li>
+  </ul>
+  <h3>Radiology</h3>
+  <ul>
+    <li>There is <em>oedema</em> on the <em>tibial plateau</em>.</li>
+  </ul>
+  <p>
+Often
+only one or two words will change in these types of sentences over
+the different patients.
+  </p>
+  <p>
+There
+are no apps available to the public that can quickly automate
+repetitive sentences and there is demand for a product like this
+(Evan 2020, pers. conv., 11 December). 
+  </p>
+</div>
+<div class="content_box">
+  <h2>Potential User Base</h2>
+  <p>
+There
+are over 25,000 members of Australian Psychology Association and
+29,000 members of the equivalent Physiotherapy Association (APS 2021;
+APA 2021). There are also approximately 20,000 practising counsellors
+in Australia (Keast 2017). Medipeople (“Radiologist Salaries in
+Australia &amp; New Zealand” 2018) estimates that over 2000
+radiologists work in Australia, and with most radiologists making use
+of competing technology (with voice recognition), this app will still
+be useful if it provides superior customisation.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Threats</h2>
+  <h3>Risks</h3>
+  <p>
+There
+is a risk that after releasing the app, other companies may create
+imitation products. Experienced developers could achieve this quickly
+due to the simplicity of the app. It would be best to avoid this by
+developing a <b>strong brand</b> with
+adequate trademark protection and fostering a good relationship with
+the user base. 
+  </p>
+  <h3>Competitors</h3>
+  <p>
+There
+are currently no publicly available competitor products that the team
+can find. 
+  </p>
+  <p>
+There
+is a Microsoft word extension used for marking within an Australian
+University. (“Norfolk” 2021) It includes comment banks as a
+feature, but it is private, so we are not able to assess it.
+There
+is at least one, and likely more, private radiology applications that
+use voice recognition, discussed below.
+It
+would be desirable to <b>differentiate</b> this product
+from voice recognition transcription applications, such as
+radiologists use. This kind of software is prolific in various forms,
+and there would be more consumer demand for a different niche. 
+  </p>
+  <h3>Existing Use Case</h3>
+  <h4>Karisma</h4>
+  <p>
+Karisma
+(<a href="https://www.kestral.com.au/solutions/karisma/">https://www.kestral.com.au/solutions/karisma/</a>)
+is a Radiology Information System developed by Kestral Computing Pty
+Ltd and is used by the Radiology department at the Royal Melbourne
+Hospital to manage patient information in the department. The
+application performs scheduling, tracks appointment information,
+patient alerts, reports and accounting for payments.  
+  </p>
+  <p>
+In
+almost all workflows, Karisma provides a field for notes made against
+various data entities (patients, services, letters, payments) which
+allow a function known as Report Templates. These are a shortcut
+combination that allow for quick pasting of a pre-defined and
+formatted block of text into the currently open notes field.
+Templates are used for radiologists to quickly insert formulaic
+report content, for reception staff to insert appointment letter
+content and for nursing staff to leave important medical alerts for
+patients.
+  </p>
+  <h4>Example Workflow</h4>
+  <img class="nondark" src="./images/karisma_1.png" />
+  <div>(Figure 19: Karisma window used to create a Report template.)</div>
+  <p>
+Figure
+19 above shows the Karisma
+interface window in which a user might configure a template to be
+used for later.  Example shown is a Protocol for a trauma scan.  
+  </p>
+  <img class="nondark" src="./images/karisma_2.png" />
+  <div>(Figure 20: Invoking a template in a note field within Karisma)</div>
+  <p>
+Karisma
+allows entering a partial match to the code, “pc.t” <i>(fig.
+20),</i> followed by the hard coded shortcut combination
+Crtl-Space that displays a list of all templates that match the code
+given.  Typing “pc.t.T” would exclude the first entry from
+selection.  
+  </p>
+  <img class="nondark" src="./images/karisma_3.png" />
+  <div>(Figure 21: Inserted template in Karisma)</div>
+  <p>
+After
+inserting the template <i>(fig.
+4),</i> it becomes normal text that can be edited. Of note is
+the wildcard field that has replaced the [Current Date/Time] with the
+current date and time, and the [Security User Name] with the current
+logged in user’s name.  
+  </p>
+  <h4>Flaws</h4>
+  <ul>
+    <li>Limited to in-application use only. The function is built into Karisma and not available in other patient information systems, such as the hospital-wide systems like iPM and EPIC.  </li>
+    <li>Templates are not shared between applications outside of Karisma; current existing problem in the department relates to Nursing staff being unable to use templates for notes in EPIC to record the same patient alerts; EPIC does not have a freeform templating system.</li>
+    <li>Method to invoke templates are long and convoluted causing a potential training issue.</li>
+    <li>Proliferation of many customized templates used by different staff; some radiologists utilise personally written templates customized for their own individual use causing difficulty in standardisation.</li>
+  </ul>
+</div>
+<div class="content_box">
+  <h2>SWOT Analysis for RoboWrite</h2>
+  <h3>Strengths</h3>
+  <p>
+The
+project can progress steadily from a minimal and manageable MVP
+towards a more feature-rich product. There are no new technological
+leaps required to create the app. It is merely automating a common
+task.
+Additional
+strength is that team members could apply the learning experience
+from creating this to similar text-based apps.
+  </p>
+  <h3>Weaknesses</h3>
+  <ul>
+    <li> <i>Simplicity:</i> It may be challenging to create a strong value proposition for customers because it is a straightforward app.</li>
+    <li> <i>Speed:</i> The app must be very responsive and user friendly for users to benefit.  The app will not get strong adoption if it is slow or cumbersome in any way. Developers must minimise user actions to get the output to where it needs to go for the user. </li>
+    <li> <i>Codebase:</i> As a consequence of its simplicity, it would be an out of proportion amount of effort to produce codebases for all possible platforms, especially without being sure what platforms users are likely to use at this stage. The team will avoid wasted effort by either focussing solely on one platform that is most likely to be used (Web or iPad) or spending a reasonable amount of time finding a means of delivering the app to as many devices as possible from the one codebase.</li>
+    <li> <i>Security:</i> JavaScript projects that incorporate many technology layers are known to be more challenging to secure. Using a framework (or native app) would mean the project automatically gains the provider’s security features. This use would not absolve the team from security responsibility but would substantially reduce the time spent focussing on security in the early stages. (Ionic 2021)</li>
+  </ul>
+  <h3>Opportunities</h3>
+  <p>
+Future
+funding and monetisation could come from:
+  </p>
+  <ul>
+	<li>
+    <i>App sales:</i> Users ideally could try free for one week and then need to pay a once-off fee or small subscription. Mobile app store distributions incur high fees – 15% for Apple App store. (Leswing 2020)</li>
+  <li> ‘<i>Freemium’</i><b> </b><i>purchases:</i> The app could require a purchase to unlock the open/save feature, allowing the user to experience the app before paying for the major feature. iCloud or similar sync could be a further paid feature.  </li>
+  <li> <i>Licencing:</i> The team could licence desktop applications to services that bundle apps for subscription fees such as SetApp. Hospitals or centres might pay annual licencing fees if this allowed them to modify the app to suit them or pay for the further development of features they require.</li>
+  <li> <i>Sponsorship:</i><b> </b>Professional organisations such as APA and APS mentioned above might sponsor development in return for member discounts.</li>
+  <li> <i>Crowdfunding:</i> This would involve offering discounts to pre-purchase the software (or additional features) and probably require free and paid promotions through social media. By getting prospective users to pay in advance for specific features, we would get the most accurate information about the order of the features we should implement. Crowd-funding also increases awareness of the app from the regular viewers of a crowdsourcing platform. The main risk is that it will present poorly to the public if it fails to reach a funding goal. It is also uncertain if this campaign will reach enough buyers relative to the low cost of the app. (App Partner Academy 2018)</li>
+  <li> <i>Donations:</i> Users would have an in-app option to donate money to develop the app, including future support and features. Developers could encourage users by displaying a discrete but persistent popup or toolbar until the user donates.</li>
+  <li> <i>Open-source:</i> The team might continue development by harnessing other programmers’ volunteer time and interested people by making the app available on a public repository.</li>
+  </ul>
+</div>
+<div class="content_box">
+  <h2>Description</h2>
+  <p>
+The
+app will be a basic three-page application that consists of:
+  </p>
+  <h3>Minimum Viable Product (MVP) features</h3>
+  <ul>
+    <li> <i>Setup page:</i><b> </b>A page where a user can set up the tick-boxes and the sentences to go with them. The user will type in the leading text for each tick-box series. It will also allow you to save the template or open others.</li>
+    <li> <i>Tick-box page:</i> A page which allows the user to tick the relevant boxes in an easy-to-use format and clear the tick-boxes when done. It may be more user-friendly and attractive to use boxes, labels or buttons that can be selected or deselected, which also reduces the number of on-screen elements. </li>
+    <li> <i>Output page:</i> A popup or page where the output text is displayed, and the user can save, share or export the text quickly to add elsewhere.</li>
+  </ul>
+  <h3>Further features</h3>
+  <ul>
+    <li> <i>Save and open:</i><b> </b>Being able to save different templates would be a landmark feature in the development process. It would be highly desirable for a user as long as they can easily export results in the meantime. Being able to save to device or server would mean it would be a much more attractive product because users could have templates and organisations such as hospitals or centres could store the data and provide standardised templates</li>
+    <li> <i>Cloud sync:</i> The user could easily swap between devices. For example, making the selections on an iPad and then changing to the desktop app to export the results. Alternatively, a user might want to use different devices at different workplaces.</li>
+    <li> <i>Adaptive layout:</i><b> </b>In the event the user chooses to create whole sentences to select, the <em>Setup page</em> will need to allow these sentences to stack clearly on top of each other and the <em>Tick-box</em><b> </b><em>page</em> will need to allow at least a few of the words of each sentence to be visible, possibly the whole sentence. The team will need to put effort into an adaptive layout to account for the variety of possible setups and also different device sizes.</li>
+    <li> <i>Sentence logic:</i><b> </b>Saving files may allow users to create different templates for different situations. However, the app may also need to display certain sentences based on the selections made in earlier sentences by creating an additional input area on the <em>Setup page. </em>It would be a simple input where the user writes the keyword(s) that the sentence is contingent upon. It would remain hidden until those words are used in the <em>Tick-box </em>page. </li>
+    <li><i>Hotkeys and Background Operation:</i>Making the program work in the background (or with a floating window) that intercepts user-defined hotkeys before pasting the text into the current text field of the user’s active window.  This would allow the user to make use of templates in other programs without having to switch between our application and the target programs. This function would be very beneficial in highly repetitive tasks.  </li>
+  </ul>
+  <h3>Other design notes</h3>
+  <p>
+It
+may be possible to make it a single page application and use modals
+for the Setup page and the Output page.
+  </p>
+  <img src="./images/robowrite_2.png" style="display:inline-block; width:48%; vertical-align:top;" /><img src="./images/robowrite_1.png" style="display:inline-block; width:48%;" />
+</div>
+<div class="content_box">
+  <h2>Tool Selection</h2>
+  <p>
+Tool
+selection is a significant decision that can affect the project far
+into the future. The team cannot easily predict the difficulty in
+coding design and features in advance without a broad knowledge of
+the tools available. 
+  </p>
+  <img class="nondark" src="./images/tech_stack.gif" />
+  <p>
+Considerations
+include
+  </p>
+  <ul>
+    <li>skills of the available team</li>
+    <li>learning curves</li>
+    <li>the size of the community and learning resources available</li>
+    <li>maintainability</li>
+    <li>security (this is less a concern at the early stages)</li>
+    <li>testing and auditing</li>
+  </ul>
+  <h3>Web App</h3>
+  <p>
+Using
+a standard client-side web stack of HTML/CSS/JavaScript is the most
+obvious option (Oragui 2018). The team could expand this to using
+NodeJS and MongoDB server-side, using JavaScript (Suschevich 2020).
+It would require the least amount of new language or syntax learning
+to be done by the team. However, it would likely be time-consuming
+for some members to learn how to manage state, transitions between
+pages and make elements look appealing and adaptive. It would also be
+possible to adapt this web code to install on mobile devices (using
+wrappers such as Capacitor and Cordova) making it a Hybrid App (“What
+is Capacitor?” 2018).
+However,
+users must find the app intuitive and easy to navigate based on their
+experience with other apps. Using a framework (such as React or
+Ionic) or at least a library such as Bootstrap, would reliably
+provide this familiar appearance and behaviour (Ovchinnikova 2020). 
+  </p>
+  <h3>Ionic</h3>
+  <p>
+One
+stand-out tool for rapid development would be the cross-platform
+programming system Ionic (Ionic 2020), which leverages HTML and
+Javascript web technologies, making it adaptable and quicker to
+learn. The code used in an ionic page is easily recognisable to a Web
+Developer.
+The
+team can then use this single codebase to build the app for iOS,
+Android, web, desktop or any other platform where the web
+runs <em>(“Ionic Article: Comparing
+Cross-Platform Frameworks” 2019). </em>Although it is
+not native code and runs as a web view in iOS, an Ionic application
+can also use native level protocols such as identity management or
+the camera.
+  </p>
+  <p>
+Ionic
+comes in two parts. One is a set of UI components that can be used,
+including the JavaScript libraries on the page that you are writing
+in ionic-style code. The second part is the CLI which is more of a
+platform. It sets up the project folder/file hierarchy and can run as
+a server to serve the web app. Ionic also uses Capacitor to compile
+the hybrid app to be installed on non-web platforms. (“What is
+Capacitor?” 2018)
+  </p>
+  <h3>Ionic Libraries</h3>
+  <p>
+Developers
+can use Ionic with several different front-end component libraries
+and frameworks. These are all built on JavaScript, HTML and CSS, so
+share some commonality. (Ionic 2020)
+  </p>
+  <ul>
+    <li>Vue</li>
+    <li>React</li>
+    <li>StencilJS (or plain JavaScript)</li>
+    <li>Angular</li>
+  </ul>
+  <p>
+Of
+these options JS (JavaScript) is the most ubiquitous and would
+require the least new language learning on the part of those in the
+team coding the app. On the other hand, there is significantly more
+free learning material to be found online for React and Angular when
+used within an ionic project. Angular is popular but has regular
+breaking changes to the framework as it is upgraded and there have
+already been successive versions 1,2 and 3 (Rodriguez &amp; Bell
+2017). React is also a strong option and can be slowly migrated to
+from JavaScript.
+It
+is possible to: 
+  </p>
+  <ol>
+    <li>start coding in Ionic with a basic web app (does not require compiling, uses CDN (Content Delivery Network) for elements)</li>
+    <li>add react components if needed or as learnt </li>
+    <li>use an IDE (Integrated Development Environment) and Ionic-CLI (Command Line Interface) to compile an app for iOS and android</li>
+    <li>incorporate testing and CI (continuous integration)</li>
+  </ol>
+  <h3>React</h3>
+  <p>
+<i><em>React is an
+open-source, front end, JavaScript library for building user
+interfaces or UI components. It is maintained by Facebook and a
+community of individual developers and companies. </em>(“React
+– A JavaScript library for building user interfaces” 2021). </i>
+  </p>
+  <p>
+The
+main strength of React is that you can make attractive web
+applications without spending time thinking about and writing the
+HTML and CSS code required for formatting and appearance. It also can
+handle the functionality of the website. The main drawback is the
+learning time required beyond the basic web stack as it has a unique
+syntax.
+  </p>
+  <h3>React Native</h3>
+  <p>
+<i><em>React Native utilises the JS framework
+React, but renders native UI elements at runtime, allowing you to
+build iOS and Android apps.</em><em> (“Ionic
+Article: Comparing Cross-Platform Frameworks” 2019)</em></i>
+  </p>
+  <p>
+React
+Native is a prevalent tool for creating cross-platform apps. However,
+it can require slightly different code bases for each platform
+(“React Native Vs Ionic: Detailed Comparison 2020” 2021). One
+advantage is that developers can translate it from React easily, so
+the team could start developing a react web app and then progress to
+a react native app for mobile devices. It is not clear how much
+rewriting would be necessary, although it should be minimal as the
+bulk of this app idea involves the user interface; the app will
+require only a few platform-specific APIs and protocols.
+  </p>
+  <h3>iOS Native (XCode/Swift)</h3>
+  <p>
+It
+might be possible for the team to learn Xcode programming and release
+it only on Mac (“Apple Developer: Mac Catalyst” 2021), iPad and
+iOS. However, from personal experience, Apple’s XCode (IDE) and
+Swift (language) can present steep learning curves for new
+developers. The language is unique, strictly typed and has evolved
+significantly in recent years (meaning online examples are sometimes
+unreliable). XCode can be painful to navigate. Debugging, deployment
+and testing errors can be challenging without experience.
+Furthermore, this approach requires developers to install XCode and
+device simulators, often meaning they need a Mac computer.
+However,
+the advantage is that the team could focus on one ecosystem and
+produce succinct code for a fast and seamless app experience.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Decision</h2>
+  <p>
+The
+team prefers to build a prototype with a minimum amount of tooling
+lock-in. Writing a web page in pure JavaScript (with Ionic for UI
+enhancements) gives a wide amount of options to progress the
+application. It will still be efficient and fast to code an MVP given
+the existing web stack skills of the team. Once past the prototype
+stage, we can switch to a dedicated framework. After the basic
+functionality is implemented, refactoring part of the code using a
+different paradigm should be possible in a reasonable amount of time.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Version Control</h2>
+  <p>
+Git
+would be used for version control and the repository hosted on
+GitHub. This is standard among modern app developers and there are a
+number of strong free alternatives if there are any issues
+encountered (van Gumster 2018; Atlassian 2019). Our team is also
+encouraged to use a GUI for git version control awareness. GitKraken
+is an excellent multi-platform option (“Free Git GUI Client -
+Windows, Mac &amp; Linux | GitKraken” 2019). 
+  </p>
+</div>
+<img src="./images/robowrite_featuremap.gif" />
+<div class="content_box">
+  <h2>Testing and Integration</h2>
+  <p>
+Cypress
+is a simple but effective testing tool for web platforms. It uses
+JavaScript code to set up which is already known by members of the
+team. It can be used as part of Continuous Integration if that is
+needed in later development (“JavaScript End to End Testing
+Framework” 2021).
+  </p>
+</div>
+<div class="content_box">
+  <h2>Prototyping</h2>
+  <p>
+InVision
+Studio is free for 1 project. (“Plans &amp; Pricing” 2021). It
+has a good reputation among User Interface designers and should work.
+Figma (“A Free, Online Wireframing Tool to Help You Communicate
+Your Design” 2021) also offers a simple wireframing tool for free
+that could precede and possibly cover prototyping. Either software
+suite could be used with no significant disadvantages. Rough sketches
+will be the first stage of prototyping and, because the project is
+simple, may even be sufficient for MVP prototyping.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Skills and Feasibility</h2>
+  <p>
+Programming
+skills for development and testing are the main requirement, but
+other skills will allow the app to take form more effectively.
+Prototyping and user outreach may prevent unnecessary code changes
+and provide an initial deliverable. Design and presentation skills
+could help create awareness of the product and advertise it well on a
+website and the various app stores. The biggest obstacle is likely
+going to be having to learn app development skills and potentially
+spending time on this rather than producing a product or alternative
+deliverable. However, this would be very easy to access, given the
+number of free or cheap online courses for Ionic development (Grimm
+2020; Moroney 2020). Therefore, learning this is entirely possible in
+less than 10 hours. Also, there would be no need for external
+database usage in the Minimum Viable Product; the state and saved
+templates could be kept on the user's device.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Maintanability</h2>
+  <p>
+The
+advantage of focussing on the standard we stack with Ionic components
+means that the languages used are unlikely to change quickly. This
+means there is less likelihood of coders needing to review the
+codebase and update it according to language changes or framework
+updates. The code most likely to need updating is the react
+components if they are used.
+  </p>
+</div>
+<div class="content_box">
+  <h2>Outcome (MVP)</h2>
+  <p>
+A
+successful app would allow many professionals to save work hours at a
+small cost and help improve the world. Professionals will be able to
+record the standard information more quickly and instead focus on the
+primary purpose of the appointment. However, even as a prototype,
+customer engagement and specification would allow development to
+continue at a later stage if found to be viable.
+  </p>
+</div>
